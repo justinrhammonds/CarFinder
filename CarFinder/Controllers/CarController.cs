@@ -41,21 +41,37 @@ namespace CarFinder.Controllers
         public IHttpActionResult GetModelsByYrMk(string model_year, string make)
         {
             var modelYear = new SqlParameter("@model_year", model_year);
-            var carMake = new SqlParameter("@make", make);
+            var Make = new SqlParameter("@make", make);
             var retval = db.Database.SqlQuery<string>( //creates a raw SQL query for the Database 'Car' w/ EXEC statement enclosed in ""
-                "EXEC GetModelsByYrMk @model_year, @make", modelYear, carMake).ToList();
+                "EXEC GetModelsByYrMk @model_year, @make", modelYear, Make).ToList();
 
             return Ok(retval);
         }
 
         //you need one of these for every stored procedure
-        //GET CAR DATA BY YEAR
-        public IHttpActionResult GetCarDataByYr(string cars_year) 
+        //GET TRIMS BY Year Make Model
+        public IHttpActionResult GetTrimByYrMkMod(string model_year, string make, string model_name)
         {
-            var carsByYear = new SqlParameter("@model_year", cars_year);
+            var modelYear = new SqlParameter("@model_year", model_year);
+            var Make = new SqlParameter("@make", make);
+            var modelName = new SqlParameter("@model_name", model_name);
+            var retval = db.Database.SqlQuery<string>( //creates a raw SQL query for the Database 'Car' w/ EXEC statement enclosed in ""
+                "EXEC GetModelsByYrMk @model_year, @make, @model_name", modelYear, Make, modelName).ToList();
+
+            return Ok(retval);
+        }
+
+        //you need one of these for every stored procedure
+        //GET CAR DATA
+        public IHttpActionResult GetCarData(string model_year, string make, string model_name, string model_trim) 
+        {
+            var modelYear = new SqlParameter("@model_year", model_year ?? "");
+            var Make = new SqlParameter("@make", make ?? "");
+            var modelName = new SqlParameter("@model_name", model_name ?? "");
+            var modelTrim = new SqlParameter("@model_trim", model_trim ?? "");
+            
             var retval = db.Database.SqlQuery<Car>( //creates a raw SQL query for the Database w/ EXEC statement enclosed in ""
-                "EXEC GetCarDataByYr @model_year",
-                carsByYear).ToList();
+                "EXEC GetCarData @model_year, @make, @model_name, @model_trim", modelYear, Make, modelName, modelTrim).ToList();
 
             return Ok(retval);
         }
