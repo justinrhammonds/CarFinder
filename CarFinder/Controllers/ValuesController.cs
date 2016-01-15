@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace CarFinder.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     [Authorize]
     public class ValuesController : ApiController
     {
