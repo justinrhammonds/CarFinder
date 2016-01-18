@@ -481,54 +481,86 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:CarFinder.Controllers.CarController">
+            <summary>
+            Provides functionality for the type 'Car'.
+            </summary>
+            <remarks>
+            Contains methods that retrieve specific data about cars from the Huge Car List Database, 
+            recall information from the National Highway Traffic Safety Administration, and an 
+            associated image via a third party Search API from Bing
+            </remarks>
+        </member>
         <member name="M:CarFinder.Controllers.CarController.GetUniqueYears">
             <summary>
-            This method references a stored procedure that gets all distinct years from the Huge Car List Database.
+            GETS all distinct years from Huge Car List Database.
             </summary>
             <returns>
-            Returns all distict years in descending order beginning with the most recent year.
+            Returns a list of all distict years.
             </returns>
         </member>
         <member name="M:CarFinder.Controllers.CarController.GetMakesByYear(System.String)">
             <summary>
-            This method references a stored procedure that gets all distinct car makes from a specific parameter 'model_year' from the Huge Car List Database.
+            GETS all distinct car makes from the Huge Car List Database.
             </summary>
+            <remarks>
+            Requires the input parameter <paramref name="model_year"/>
+            </remarks>
             <param name="model_year">The Year</param>
             <returns>
-            Returns all distinct car makes from specified parameter 'model_year'in ascending alphabetical order.
+            Returns a list of all distinct car makes.
             </returns>
         </member>
         <member name="M:CarFinder.Controllers.CarController.GetModelsByYrMk(System.String,System.String)">
             <summary>
-            This method references a stored procedure that gets all distinct car models from specific parameters 'model_year' and 'make' from the Huge Car List Database.
+            GETS all distinct car models from the Huge Car List Database.
             </summary>
+            <remarks>
+            Requires the input parameters <paramref name="model_year"/>, and <paramref name="make"/>
+            </remarks>
             <param name="model_year">The Year</param>
             <param name="make">The Make</param>
             <returns>
-            Returns all distinct car models from specified parameters 'model_year' and 'make' in ascending alphabetical order.
+            Returns a list of all distinct car models.
             </returns>
         </member>
         <member name="M:CarFinder.Controllers.CarController.GetTrimByYrMkMod(System.String,System.String,System.String)">
             <summary>
-            This method references a stored procedure that gets all distinct car trim from specific parameters 'model_year', 'make', and 'model_name' from the Huge Car List Database.
+            GETS all distinct car trims from the Huge Car List Database.
             </summary>
+            <remarks>
+            Requires the input parameters <paramref name="model_year"/>, <paramref name="make"/>, and <paramref name="model_name"/>
+            </remarks>
             <param name="model_year">The Year</param>
             <param name="make">The Make</param>
             <param name="model_name">The Model</param>
             <returns>
-            Returns all distinct car models from specified parameters 'model_year', 'make', and 'model_name' in ascending alphabetical order.
+            Returns a list of all distinct car models.
             </returns>
         </member>
         <member name="M:CarFinder.Controllers.CarController.GetCarData(System.String,System.String,System.String,System.String)">
             <summary>
-            This method references a stored procedure that gets all car information from the Huge Car List Database. Optionally, it accepts values for parameters in the following order: 'model_year', 'make', and 'model_name', 'model_trim'.
+            GETS all car information from the Huge Car List Database.
             </summary>
+            <remarks>
+            As an option, the method accepts the following input parameters as filters: 
+            <paramref name="model_year"/>, <paramref name="make"/>, <paramref name="model_name"/>, and <paramref name="model_trim"/>
+            </remarks>
             <param name="model_year">The Year</param>
             <param name="make">The Make</param>
             <param name="model_name">The Model</param>
             <param name="model_trim">The Trim</param>
             <returns>
-            Returns all car information and optionally filters records by specified parameters 'model_year', 'make', model_name', and 'model_trim' sorted in alphabetical order by make,model_name, and model_trim.
+            Returns a list of all car data from the specified input parameters.
+            </returns>
+        </member>
+        <member name="M:CarFinder.Controllers.CarController.GetCar(System.Int32)">
+            <summary>
+            Configuration of third party APIs from National Highway Traffic Safety Administration and Bing Search    
+            </summary>
+            <param name="Id">The Car Record's ID</param>
+            <returns>
+            Returns any existing recall information (NHTSA) and an associated image for a specified car.
             </returns>
         </member>
         <member name="M:Bing.BingSearchContainer.Composite(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
