@@ -556,7 +556,7 @@
         </member>
         <member name="M:CarFinder.Controllers.CarController.GetCar(System.Int32)">
             <summary>
-            Configuration of third party APIs from National Highway Traffic Safety Administration and Bing Search    
+            Retieves info from third party APIs: National Highway Traffic Safety Administration and Bing Search    
             </summary>
             <param name="Id">The Car Record's ID</param>
             <returns>

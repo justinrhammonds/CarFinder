@@ -133,7 +133,7 @@ namespace CarFinder.Controllers
         }
 
         /// <summary>
-        /// Configuration of third party APIs from National Highway Traffic Safety Administration and Bing Search    
+        /// Retieves info from third party APIs: National Highway Traffic Safety Administration and Bing Search    
         /// </summary>
         /// <param name="Id">The Car Record's ID</param>
         /// <returns>
@@ -163,7 +163,7 @@ namespace CarFinder.Controllers
             }
             Recalls = content;
 
-            var image = new BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search/v1"));
+            var image = new BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search/v1/Image"));
 
             image.Credentials = new NetworkCredential("accountKey", "/8RvXOXJ4fcq5pAnNMdOtiueBjVHcWUUFAr8ZhHPJsI");
             var marketData = image.Composite(
@@ -184,7 +184,7 @@ namespace CarFinder.Controllers
                 null
                 ).Execute();
 
-            Image = marketData.First().Image.First().MediaUrl;
+            Image = marketData.First().Image.First().MediaUrl; 
             return Ok(new { car = Car, recalls = Recalls, image = Image });
 
         }
