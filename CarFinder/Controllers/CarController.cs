@@ -1,5 +1,6 @@
 ﻿using Bing;
 using CarFinder.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -24,12 +25,26 @@ namespace CarFinder.Controllers
 
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public class Selected
+        {
+            public string year { get; set; }
+            public string make { get; set; }
+            public string model { get; set; }
+            public string trim { get; set; }
+        }
+
+        public class IdParam
+        {
+            public int id { get; set; }
+        }
+
         /// <summary>
         /// GETS all distinct years from Huge Car List Database.
         /// </summary>
         /// <returns>
         /// Returns a list of all distict years.
         /// </returns>
+        [HttpPost]
         public IHttpActionResult GetUniqueYears()
         {
             var retval = db.Database.SqlQuery<string>(
@@ -48,9 +63,10 @@ namespace CarFinder.Controllers
         /// <returns>
         /// Returns a list of all distinct car makes.
         /// </returns>
-        public IHttpActionResult GetMakesByYear(string model_year)
+        [HttpPost]
+        public IHttpActionResult GetMakesByYear(Selected selected)
         {
-            var modelYear = new SqlParameter("@model_year", model_year);
+            var modelYear = new SqlParameter("@model_year", selected.year);
             var retval = db.Database.SqlQuery<string>(
                 "EXEC GetMakesByYear @model_year",
                 modelYear).ToList();
@@ -70,10 +86,11 @@ namespace CarFinder.Controllers
         /// <returns>
         /// Returns a list of all distinct car models.
         /// </returns>
-        public IHttpActionResult GetModelsByYrMk(string model_year, string make)
+        [HttpPost]
+        public IHttpActionResult GetModelsByYrMk(Selected selected)
         {
-            var modelYear = new SqlParameter("@model_year", model_year);
-            var Make = new SqlParameter("@make", make);
+            var modelYear = new SqlParameter("@model_year", selected.year);
+            var Make = new SqlParameter("@make", selected.make);
             var retval = db.Database.SqlQuery<string>(
                 "EXEC GetModelsByYrMk @model_year, @make", modelYear, Make).ToList();
 
@@ -93,11 +110,12 @@ namespace CarFinder.Controllers
         /// <returns>
         /// Returns a list of all distinct car models.
         /// </returns>
-        public IHttpActionResult GetTrimByYrMkMod(string model_year, string make, string model_name)
+        [HttpPost]
+        public IHttpActionResult GetTrimByYrMkMod(Selected selected)
         {
-            var modelYear = new SqlParameter("@model_year", model_year);
-            var Make = new SqlParameter("@make", make);
-            var modelName = new SqlParameter("@model_name", model_name);
+            var modelYear = new SqlParameter("@model_year", selected.year);
+            var Make = new SqlParameter("@make", selected.make);
+            var modelName = new SqlParameter("@model_name", selected.model);
             var retval = db.Database.SqlQuery<string>(
                 "EXEC GetTrimByYrMkMod @model_year, @make, @model_name", modelYear, Make, modelName).ToList();
 
@@ -119,12 +137,13 @@ namespace CarFinder.Controllers
         /// <returns>
         /// Returns a list of all car data from the specified input parameters.
         /// </returns>
-        public IHttpActionResult GetCarData(string model_year, string make, string model_name, string model_trim) 
+        [HttpPost]
+        public IHttpActionResult GetCarData(Selected selected) 
         {
-            var modelYear = new SqlParameter("@model_year", model_year ?? "");
-            var Make = new SqlParameter("@make", make ?? "");
-            var modelName = new SqlParameter("@model_name", model_name ?? "");
-            var modelTrim = new SqlParameter("@model_trim", model_trim ?? "");
+            var modelYear = new SqlParameter("@model_year", selected.year ?? "");
+            var Make = new SqlParameter("@make", selected.make ?? "");
+            var modelName = new SqlParameter("@model_name", selected.model ?? "");
+            var modelTrim = new SqlParameter("@model_trim", selected.trim ?? "");
             
             var retval = db.Database.SqlQuery<Car>(
                 "EXEC GetCarData @model_year, @make, @model_name, @model_trim", modelYear, Make, modelName, modelTrim).ToList();
@@ -139,12 +158,13 @@ namespace CarFinder.Controllers
         /// <returns>
         /// Returns any existing recall information (NHTSA) and an associated image for a specified car.
         /// </returns>
-        public async Task<IHttpActionResult> GetCar(int Id)
+        [HttpPost]
+        public async Task<IHttpActionResult> GetCar(IdParam id) //(Selected selected)
         {
             HttpResponseMessage response;
             string content = "";
-            var Car = db.Cars.Find(Id);
-            var Recalls = "";
+            var Car = db.Cars.Find(id.id); //(Selected selected) passes in model, make, 
+            dynamic Recalls = "";
             var Image = "";
             using (var client = new HttpClient())
             {
@@ -161,14 +181,14 @@ namespace CarFinder.Controllers
                     return InternalServerError(e);
                 }
             }
-            Recalls = content;
+            Recalls = JsonConvert.DeserializeObject(content);
 
             var image = new BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search/v1/Image"));
 
             image.Credentials = new NetworkCredential("accountKey", "/8RvXOXJ4fcq5pAnNMdOtiueBjVHcWUUFAr8ZhHPJsI");
             var marketData = image.Composite(
                 "image",
-                Car.model_year + " " + Car.make + " " + Car.model_name + " " + Car.model_trim,
+                Car.model_year + " " + Car.make + " " + Car.model_name + " " + Car.model_trim + " " + "NOT ebay",
                 null,
                 null,
                 null,

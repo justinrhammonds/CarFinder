@@ -85,7 +85,6 @@ c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\bin\Mi
 c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\bin\System.Web.Http.Owin.xml
-c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\obj\Debug\CarFinder.csprojResolveAssemblyReference.cache
 c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\obj\Debug\CarFinder.dll
 c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\obj\Debug\CarFinder.pdb
 c:\users\justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\obj\Debug\CarFinder.Migrations.initialcreate.resources
@@ -112,3 +111,4 @@ C:\Users\Justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\bin\Sy
 C:\Users\Justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\obj\Debug\CarFinder.csproj.App.config
 C:\Users\Justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\bin\GoogleSearchApi.dll
 C:\Users\Justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\bin\GoogleSearchApi.xml
+C:\Users\Justin\documents\visual studio 2015\Projects\CarFinder\CarFinder\obj\Debug\CarFinder.csprojResolveAssemblyReference.cache

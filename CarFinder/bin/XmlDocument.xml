@@ -499,7 +499,7 @@
             Returns a list of all distict years.
             </returns>
         </member>
-        <member name="M:CarFinder.Controllers.CarController.GetMakesByYear(System.String)">
+        <member name="M:CarFinder.Controllers.CarController.GetMakesByYear(CarFinder.Controllers.CarController.Selected)">
             <summary>
             GETS all distinct car makes from the Huge Car List Database.
             </summary>
@@ -511,7 +511,7 @@
             Returns a list of all distinct car makes.
             </returns>
         </member>
-        <member name="M:CarFinder.Controllers.CarController.GetModelsByYrMk(System.String,System.String)">
+        <member name="M:CarFinder.Controllers.CarController.GetModelsByYrMk(CarFinder.Controllers.CarController.Selected)">
             <summary>
             GETS all distinct car models from the Huge Car List Database.
             </summary>
@@ -524,7 +524,7 @@
             Returns a list of all distinct car models.
             </returns>
         </member>
-        <member name="M:CarFinder.Controllers.CarController.GetTrimByYrMkMod(System.String,System.String,System.String)">
+        <member name="M:CarFinder.Controllers.CarController.GetTrimByYrMkMod(CarFinder.Controllers.CarController.Selected)">
             <summary>
             GETS all distinct car trims from the Huge Car List Database.
             </summary>
@@ -538,7 +538,7 @@
             Returns a list of all distinct car models.
             </returns>
         </member>
-        <member name="M:CarFinder.Controllers.CarController.GetCarData(System.String,System.String,System.String,System.String)">
+        <member name="M:CarFinder.Controllers.CarController.GetCarData(CarFinder.Controllers.CarController.Selected)">
             <summary>
             GETS all car information from the Huge Car List Database.
             </summary>
@@ -554,7 +554,7 @@
             Returns a list of all car data from the specified input parameters.
             </returns>
         </member>
-        <member name="M:CarFinder.Controllers.CarController.GetCar(System.Int32)">
+        <member name="M:CarFinder.Controllers.CarController.GetCar(CarFinder.Controllers.CarController.IdParam)">
             <summary>
             Retieves info from third party APIs: National Highway Traffic Safety Administration and Bing Search    
             </summary>

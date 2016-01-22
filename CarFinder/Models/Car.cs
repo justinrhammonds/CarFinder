@@ -30,52 +30,52 @@ namespace CarFinder.Models
         public string engine_position { get; set; }
 
         [StringLength(50)]
-        public string engine_cc { get; set; }
+        public string engine_cc { get; set; } //Engine Size (cc):
 
         [StringLength(50)]
-        public string engine_num_cyl { get; set; }
+        public string engine_num_cyl { get; set; } //Number of Engine Cylinders:
 
         [StringLength(50)]
-        public string engine_type { get; set; }
+        public string engine_type { get; set; } //Engine Type:
 
         [StringLength(50)]
-        public string engine_valves_per_cyl { get; set; }
+        public string engine_valves_per_cyl { get; set; } //Engine Valves Per Cylinder:
 
         [StringLength(50)]
         public string engine_power_ps { get; set; }
 
         [StringLength(50)]
-        public string engine_power_rpm { get; set; }
+        public string engine_power_rpm { get; set; } //Maximum RPM
 
         [StringLength(50)]
-        public string engine_torque_nm { get; set; }
+        public string engine_torque_nm { get; set; } //Maximum Torque (nm): 
 
         [StringLength(50)]
-        public string engine_torque_rpm { get; set; }
+        public string engine_torque_rpm { get; set; } //RPM For Maximum Torque (nm):
 
         [StringLength(50)]
-        public string engine_bore_mm { get; set; }
+        public string engine_bore_mm { get; set; } //Engine Piston Diameter (mm):
 
         [StringLength(50)]
-        public string engine_stroke_mm { get; set; }
+        public string engine_stroke_mm { get; set; } //Piston Stroke (mm)
 
         [StringLength(50)]
-        public string engine_compression { get; set; }
+        public string engine_compression { get; set; } //Cylinder Compression Ratio
 
         [StringLength(50)]
-        public string engine_fuel { get; set; }
+        public string engine_fuel { get; set; } //Fuel Type:
 
         [StringLength(50)]
-        public string top_speed_kph { get; set; }
+        public string top_speed_kph { get; set; } //Top Speed (kph)
 
         [StringLength(50)]
-        public string zero_to_100_kph { get; set; }
+        public string zero_to_100_kph { get; set; } //0-100 KPH (in seconds):
 
         [StringLength(50)]
-        public string drive_type { get; set; }
+        public string drive_type { get; set; } //Front Wheel or Rear Wheel Drive:
 
         [StringLength(50)]
-        public string transmission_type { get; set; }
+        public string transmission_type { get; set; } //Transmission Type:
 
         [StringLength(50)]
         public string seats { get; set; }

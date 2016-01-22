@@ -1,0 +1,418 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+<title>CarFinder | Web API</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Dancing+Script:400,700|Vidaloka' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="Content/trNgGrid.min.css" rel="stylesheet" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+<!--<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>-->
+<!--<script type="text/javascript" src="js/bootstrap.js"></script>-->
+<!--<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>-->
+
+
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+
+
+</head>
+<body ng-app="carFinderApp">
+  <div style="overflow:hidden;">
+    <header class="header" id="header">
+      <div class="container">
+        <span class="branding animated fadeInDown delay-07s"><span>Car</span>Finder</span>
+        <ul class="we-create animated fadeInUp delay-1s">
+          <li>Bringing you everything you want to know about cars ... and then some.</li>
+        </ul>
+      </div>
+    </header>
+  </div>
+
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+        <ul class="main-nav">
+        	<li><a href="#header">How It Works</a></li>
+            <li><a href="#service">Try It Out</a></li>
+            <li id="nav-branding"><a href="#header"><span>Car</span>Finder</a></li>
+            <li><a href="#client">View GitHub</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav><!--main-nav-end-->
+
+<section class="main-section" id="service"><!--main-section-start-->
+	<div class="container">
+    	<h2>How CarFinder Web Api Works</h2>
+    	<h6>We offer exceptional service with complimentary hugs.</h6>
+        <div class="row">
+        	<div class="col-lg-4 col-sm-6 fadeInLeft delay-05s">
+            	<div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-paw"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>branding &amp; identity</h3>
+                        <p>Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-gear"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>web development</h3>
+                        <p>Proin iaculis purus consequat sem digni ssim. Digni ssim porttitora.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-apple"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>mobile design</h3>
+                        <p>Proin iaculis purus consequat digni sem digni ssim. Purus donec porttitora entum.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-medkit"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>24/7 Support</h3>
+                        <p>Proin iaculis purus consequat sem digni ssim. Sem porttitora entum.</p>
+                    </div>
+                </div>
+            </div>
+            <figure class="col-lg-8 col-sm-6  text-right  fadeInUp delay-02s">
+              <img src="img/imac.png" alt="" />
+            </figure>
+        
+        </div>
+	</div>
+</section><!--main-section-end-->
+
+<section class="main-section alabaster"><!--main-section alabaster-start-->
+	<div class="container">
+    	<div class="row">
+			<figure class="col-lg-5 col-sm-4  fadeInLeft">
+            	<img  src="img/iphone.png" alt="">
+            </figure>
+        	<div class="col-lg-7 col-sm-8 featured-work">
+            	<h2>Special Features</h2>
+            	<P class="padding-b">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</P>
+            	<div class="featured-box">
+                	<div class="featured-box-col1  fadeInRight delay-02s">
+                    	<i class="fa-magic"></i>
+                    </div>	
+                	<div class="featured-box-col2  fadeInRight delay-02s">
+                        <h3>magic of theme development</h3>
+                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                	<div class="featured-box-col1  fadeInRight delay-04s">
+                    	<i class="fa-gift"></i>
+                    </div>	
+                	<div class="featured-box-col2  fadeInRight delay-04s">
+                        <h3>neatly packaged</h3>
+                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                	<div class="featured-box-col1  fadeInRight delay-06s">
+                    	<i class="fa-dashboard"></i>
+                    </div>	
+                	<div class="featured-box-col2  fadeInRight delay-06s">
+                        <h3>SEO optimized</h3>
+                        <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+                    </div>    
+                </div>
+                <a class="Learn-More" href="#">Learn More</a>
+            </div>
+        </div>
+	</div>
+</section><!--main-section alabaster-end-->
+
+  <section class="main-section" ng-controller="carCtrl as car">
+    <h2>Try Out CarFinder</h2>
+    <h6>Take her out for a spin!</h6>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 select">
+          <select ng-options="yr for yr in car.years" ng-model="car.selected.year" ng-change="car.getMakes()">
+            <option value="">select a year</option>
+            {{yr}}
+          </select>
+        </div>
+        <div class="col-12 select">
+          <select ng-options="mk for mk in car.makes" ng-model="car.selected.make" ng-change="car.getModels()">
+            <option value="">select a make</option>
+            {{mk}}
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 select">
+          <select ng-options="md for md in car.models" ng-model="car.selected.model" ng-change="car.getTrims()">
+            {{md}}
+            <option value="">select a model</option>
+          </select>
+        </div>
+        <div class="col-12 select">
+          <select ng-options="tr for tr in car.trims" ng-model="car.selected.trim" ng-change="car.getCars()">
+            {{tr}}
+            <option value="">select a trim</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table id="car-table" tr-ng-grid="car.cars" items="car.cars" page-items="25">
+      <thead>
+        <tr>
+          <th field-name="model_year" display-name="Year"></th>
+          <th field-name="make" display-name="Make"></th>
+          <th field-name="model_name" display-name="Model"></th>
+          <th field-name="model_trim" display-name="Trim"></th>
+          <th field-name="body_style" display-name="Body Style"></th>
+          <th field-name="engine_power_ps" display-name="Horse Power"></th>
+          <th field-name="zero_to_100_kph" display-name="0-100 KPH"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button ng-click="car.open(gridItem.id)">view</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!--  --------------------------  -->
+
+
+    <script type="text/ng-template" id="carModal.html">
+      <div class="modal-header">
+        <div class="modal-title">
+          <button class="pull-right btn btn-default" ng-click="cm.cancel()">X</button>
+          <h3>{{cm.car.car.model_year}} {{cm.car.car.make}} {{cm.car.car.model_name}} 
+            <span ng-if='cm.car.car.model_trim!= ""'> - {{cm.car.car.model_trim}}</span>
+          </h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <uib-tabset>
+          <uib-tab heading="Vehicle Information">
+            <img src="{{cm.car.image}}" />
+            <uib-accordion>
+              <uib-accordion-group heading="Vehicle Specifications">
+                <div ng-if='cm.car.car.body_style!= ""'><strong>Body: </strong>{{cm.car.car.body_style}}</div>
+                <div ng-if='cm.car.car.engine_position!= ""'><strong>Engine Position: </strong>{{cm.car.car.engine_position}}</div>
+                <div ng-if='cm.car.car.engine_cc!= ""'><strong>Body Style: </strong>{{cm.car.car.engine_cc}}</div>
+                <div ng-if='cm.car.car.engine_num_cyl != ""'><strong>No. of Cylinders: </strong>{{cm.car.car.engine_num_cyl}}</div>
+                <div ng-if='cm.car.car.engine_type!= ""'><strong>Engine Type: </strong>{{cm.car.car.engine_type}}</div>
+                <div ng-if='cm.car.car.engine_valves_per_cyl!= ""'><strong>Valves Per Cylinder: </strong>{{cm.car.car.engine_valves_per_cyl}}</div>
+                <div ng-if='cm.car.car.engine_power_ps!= ""'><strong>Horsepower: </strong>{{cm.car.car.engine_power_ps}}</div>
+                <div ng-if='cm.car.car.engine_power_rpm!= ""'><strong>Max RPM: </strong>{{cm.car.car.engine_power_rpm}}</div>
+                <div ng-if='cm.car.car.engine_torque_nm!= ""'><strong>Max Torque (nm): </strong>{{cm.car.car.engine_torque_nm}}</div>
+                <div ng-if='cm.car.car.engine_torque_rpm!= ""'><strong>RPM For Max Torque: </strong>{{cm.car.car.engine_torque_rpm}}</div>
+                <div ng-if='cm.car.car.engine_bore_mm!= ""'><strong>Piston Diameter (mm): </strong>{{cm.car.car.engine_bore_mm}}</div>
+                <div ng-if='cm.car.car.engine_stroke_mm!= ""'><strong>Piston Stroke (mm): </strong>{{cm.car.car.engine_stroke_mm}}</div>
+                <div ng-if='cm.car.car.engine_compression!= ""'><strong>Cylinder Compression Ratio: </strong>{{cm.car.car.engine_compression}}</div>
+                <div ng-if='cm.car.car.engine_fuel!= ""'><strong>Fuel Type: </strong>{{cm.car.car.engine_fuel}}</div>
+                <div ng-if='cm.car.car.top_speed_kph!= ""'><strong>Top Speed (kph): </strong>{{cm.car.car.top_speed_kph}}</div>
+                <div ng-if='cm.car.car.zero_to_100_kph!= ""'><strong>0-100 kph (in seconds): </strong>{{cm.car.car.zero_to_100_kph}}</div>
+                <div ng-if='cm.car.car.drive_type!= ""'><strong>Front/Rear Wheel Drive: </strong>{{cm.car.car.drive_type}}</div>
+                <div ng-if='cm.car.car.transmission_type!= ""'><strong>Fuel Type: </strong>{{cm.car.car.transmission_type}}</div>
+                <div ng-if='cm.car.car.seats!= ""'><strong>No. of Seats: </strong>{{cm.car.car.seats}}</div>
+                <div ng-if='cm.car.car.doors!= ""'><strong>No. of Doors: </strong>{{cm.car.car.doors}}</div>
+                <div ng-if='cm.car.car.weight_kg!= ""'><strong>Weight (kg): </strong>{{cm.car.car.weight_kg}}</div>
+                <div ng-if='cm.car.car.length_mm!= ""'><strong>Length (mm): </strong>{{cm.car.car.length_mm}}</div>
+                <div ng-if='cm.car.car.width_mm!= ""'><strong>Width (mm): </strong>{{cm.car.car.width_mm}}</div>
+                <div ng-if='cm.car.car.height_mm!= ""'><strong>Height (mm): </strong>{{cm.car.car.height_mm}}</div>
+                <div ng-if='cm.car.car.wheelbase!= ""'><strong>Wheelbase:</strong>{{cm.car.car.wheelbase}}</div>
+                <div ng-if='cm.car.car.lkm_hwy!= ""'><strong>Fuel Efficiency - Highway (lkm): </strong>{{cm.car.car.lkm_hwy}}</div>
+                <div ng-if='cm.car.car.lkm_city!= ""'><strong>Fuel Efficiency - City (lkm): </strong>{{cm.car.car.lkm_city}}</div>
+                <div ng-if='cm.car.car.fuel_capacity_l!= ""'><strong>Fuel Capacity (l): </strong>{{cm.car.car.fuel_capacity_l}}</div>
+              </uib-accordion-group>
+            </uib-accordion>
+          </uib-tab>
+          <uib-tab heading="Recall Information">
+
+          </uib-tab>
+        </uib-tabset>
+      </div>
+    </script>
+
+    <!-- ----------------------------------- -->
+
+  </section>
+
+<section class="main-section team" id="team"><!--main-section team-start-->
+	<div class="container">
+        <h2>Have Questions?</h2>
+        <h6>CarFinder Web API was developed by Justin Hammonds.</h6>
+        <div class="team-leader-block clearfix">
+            <div class="team-leader-box">
+                <div class="team-leader  fadeInDown delay-03s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/team-leader-pic1.jpg" alt="">
+                    <ul>
+                        <li><a href="#" class="fa-twitter"></a></li>
+                        <li><a href="#" class="fa-facebook"></a></li>
+                        <li><a href="#" class="fa-pinterest"></a></li>
+                        <li><a href="#" class="fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <h3 class=" fadeInDown delay-03s">Justin Hammonds</h3>
+                <span class=" fadeInDown delay-03s">Web Developer</span>
+                <p class=" fadeInDown delay-03s">Justin is a full stack web developer and an all-around nice guy. If you have any questions about how to use CarFinder Web API, feel free to email him at justinrhammonds@gmail.com.</p>
+            </div>
+        </div>
+    </div>
+</section><!--main-section team-end-->
+
+<footer class="footer">
+    <div class="container">
+      <a href="#"><div class="row footer-logo"><span>Car</span>Finder</div></a>
+      <div class="row"><span class="copyright">Copyright <i class="fa fa-copyright"></i> 2015</span></div>
+    </div>
+</footer>
+
+
+<script src="Scripts/angular.min.js"></script>
+<script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+<script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+<script src="Content/trNgGrid.min.js"></script>
+<script src="App/carCtrl.js"></script>
+<script src="App/carDataSvc.js"></script>
+
+
+<!--<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#test').scrolltofixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slidetoggle();
+            return false    
+            
+        });
+        
+    });
+</script>-->
+
+  <!--<script>
+    wow = new wow(
+      {
+        animateclass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+    document.getelementbyid('').onclick = function() {
+      var section = document.createelement('section');
+      section.classname = 'wow fadeindown';
+      this.parentnode.insertbefore(section, this);
+    };
+  </script>-->
+
+
+<!--<script type="text/javascript">-->
+	<!--//$(window).load(function(){
+		
+	//	$('.main-nav li a').bind('click',function(event){
+	//		var $anchor = $(this);
+			
+	//		$('html, body').stop().animate({
+	//			scrolltop: $($anchor.attr('href')).offset().top - 102
+	//		}, 1500,'easeinoutexpo');
+	//		/*
+	//		if you don't want to use the easing effects:
+	//		$('html, body').stop().animate({
+	//			scrolltop: $($anchor.attr('href')).offset().top
+	//		}, 1000);
+	//		*/
+	//		event.preventdefault();
+	//	});
+	//})
+</script>-->
+
+<!--<script type="text/javascript">
+
+$(window).load(function(){
+  
+  
+  var $container = $('.portfoliocontainer'),
+      $body = $('body'),
+      colw = 375,
+      columns = null;
+
+  
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnwidth: colw
+    }
+  });
+  
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentcolumns = math.floor( ( $body.width() -30 ) / colw );
+    if ( currentcolumns !== columns ) {
+      // set new column count
+      columns = currentcolumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colw )
+        .isotope('relayout');
+    }
+    
+  }).smartresize(); // trigger resize to set container width
+  $('.portfoliofilter a').click(function(){
+        $('.portfoliofilter .current').removeclass('current');
+        $(this).addclass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+			
+            filter: selector,
+         });
+         return false;
+    });
+  
+});-->
+
+<!--</script>-->
+</body>
+</html>
+
+<!-- NOTES -->
+<!-- 
+  <uib-tabset>
+    <uib-tab heading="Image">
+      <image...
+   </uib-tabset>
+  
+  
+   -->
