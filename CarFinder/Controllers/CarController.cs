@@ -207,22 +207,7 @@ namespace CarFinder.Controllers
                 null
                 ).Execute();
 
-            //var marketData = image.Image(
-            //    Car.model_year + " " + Car.make + " " + Car.model_name + " " + Car.model_trim + " " + "NOT ebay",
-            //    null,
-            //    null,
-            //    "Moderate",
-            //    null,
-            //    null,
-            //    "Size:Large+Style:Photo"
-            //    ).Execute();
-
-            //Image = marketData.FirstOrDefault()?.Image.FirstOrDefault()?.MediaUrl;
-            
-            //int element = 0;
-            //Int64 imgCnt = ExpandableSearchResult.ImageTotal();
             var Images = marketData.FirstOrDefault()?.Image;
-            //int imgCnt = Images.Count();
             foreach (var Img in Images)
             {
                 
@@ -236,9 +221,6 @@ namespace CarFinder.Controllers
                 }
 
             }
-
-
-
 
             return Ok(new { car = Car, recalls = Recalls, image = Image });
 
@@ -276,18 +258,8 @@ namespace CarFinder.Controllers
 
             return result;
 
-
-
-
-            //    Uri uriResult;
-            //    bool result = Uri.TryCreate(str, UriKind.Absolute, out uriResult) &&
-            //    (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
-            //bool result = File.Exists(path);
-            //return result;
         }
-        //public static bool Exists(
-        //    string path
-        //);
+
     }
 
 }

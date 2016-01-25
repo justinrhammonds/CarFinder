@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Tada! | A ToDo List</title>
+  <meta charset="utf-8" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Dancing+Script:400,700|Vidaloka' rel='stylesheet' type='text/css'>
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <style>
+    /*FONTS:
+    font-family: 'Vidaloka', serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Montserrat', sans-serif; */
+
+
+    body {
+      background: #0094ff;
+      color: #fff;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2em;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 100px;
+    }
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;
+    }
+
+    li {
+      margin-top: 15px;
+    }
+
+    button, input {
+      width: 50%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    button {
+      background: #66db42;
+      color: #fff;
+    }
+
+    input {
+    }
+
+    footer {
+      width: 100%;
+      height: 100px;
+      position: fixed;
+      bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .done {
+      color: #ccc;
+      text-decoration: line-through;
+      font-style: italic;
+    }
+
+    #seperator {
+      height: 150px;
+    }
+
+    #title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 110%;
+    }
+  </style>
+</head>
+<body ng-app="tadaListApp">
+  <!-- Establish your App as using AngularJS -->
+
+  <header>
+    <h1>Tada!</h1>
+    <h3>A SNAZZY TO-DO LIST</h3>
+  </header>
+
+  <main ng-controller="tadaListController as tl">
+    <!-- Marks the container for the Module Controller Functionality  -->
+    <!-- Calls the remainingTadas() function and the value of tadas.length (.length is a JS built in)  -->
+    <!-- Mustache syntax anywhere you want to bind data from the CONTROLLER into the VIEW -->
+    <span>You have {{tl.remainingTadas()}} of {{tl.tadas.length}} <span id="title">Tadas</span> to do today!</span>
+    <ul>
+      <!-- ng-repeat identifies an element to be automatically repeated PER EACH ITEM IN AN ARRAY -->
+      <li ng-repeat="tada in tl.tadas">
+        <span ng-click="tl.markComplete(tada)"><span ng-class="{'done':tada.done}">{{tada.text}}</span></span> <!--Mustasche SNYTAX --> <!-- single brackets refers to JS objects, period. -->
+      </li>
+    </ul>
+    <div id="seperator"></div>
+    <footer>
+      <button ng-click="tl.clearCompleted()">Clear Completed</button>
+      <form ng-submit="tl.newTada()">
+        <input type="text" placeholder="Enter a Tada..." ng-model="tl.tadaText" required />
+      </form>
+    </footer>
+  </main>
+
+
+  <script src="Scripts/angular.min.js"></script> <!-- Reference to Angular Script -->
+  <script src="App/tada.js"></script> <!-- Reference to Module Initialization -->
+  <script src="App/TadaCtrl.js"></script> <!-- Reference to the module controller -->
+</body>
+</html>
+
+
