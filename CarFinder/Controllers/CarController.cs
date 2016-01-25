@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -37,6 +38,8 @@ namespace CarFinder.Controllers
         {
             public int id { get; set; }
         }
+
+
 
         /// <summary>
         /// GETS all distinct years from Huge Car List Database.
@@ -138,13 +141,13 @@ namespace CarFinder.Controllers
         /// Returns a list of all car data from the specified input parameters.
         /// </returns>
         [HttpPost]
-        public IHttpActionResult GetCarData(Selected selected) 
+        public IHttpActionResult GetCarData(Selected selected)
         {
             var modelYear = new SqlParameter("@model_year", selected.year ?? "");
             var Make = new SqlParameter("@make", selected.make ?? "");
             var modelName = new SqlParameter("@model_name", selected.model ?? "");
             var modelTrim = new SqlParameter("@model_trim", selected.trim ?? "");
-            
+
             var retval = db.Database.SqlQuery<Car>(
                 "EXEC GetCarData @model_year, @make, @model_name, @model_trim", modelYear, Make, modelName, modelTrim).ToList();
 
@@ -183,7 +186,7 @@ namespace CarFinder.Controllers
             }
             Recalls = JsonConvert.DeserializeObject(content);
 
-            var image = new BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search/v1/Image"));
+            var image = new BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search/v1/Composite"));
 
             image.Credentials = new NetworkCredential("accountKey", "/8RvXOXJ4fcq5pAnNMdOtiueBjVHcWUUFAr8ZhHPJsI");
             var marketData = image.Composite(
@@ -192,11 +195,11 @@ namespace CarFinder.Controllers
                 null,
                 null,
                 null,
+                "Moderate",
                 null,
                 null,
                 null,
-                null,
-                null,
+                "Size:Large+Style:Photo",
                 null,
                 null,
                 null,
@@ -204,11 +207,87 @@ namespace CarFinder.Controllers
                 null
                 ).Execute();
 
-            Image = marketData.First().Image.First().MediaUrl; 
+            //var marketData = image.Image(
+            //    Car.model_year + " " + Car.make + " " + Car.model_name + " " + Car.model_trim + " " + "NOT ebay",
+            //    null,
+            //    null,
+            //    "Moderate",
+            //    null,
+            //    null,
+            //    "Size:Large+Style:Photo"
+            //    ).Execute();
+
+            //Image = marketData.FirstOrDefault()?.Image.FirstOrDefault()?.MediaUrl;
+            
+            //int element = 0;
+            //Int64 imgCnt = ExpandableSearchResult.ImageTotal();
+            var Images = marketData.FirstOrDefault()?.Image;
+            //int imgCnt = Images.Count();
+            foreach (var Img in Images)
+            {
+                
+                if (UrlCtrl.IsUrl(Img.MediaUrl))
+                {
+                    Image = Img.MediaUrl;
+                    break;
+                } else
+                {
+                    continue;
+                }
+
+            }
+
+
+
+
             return Ok(new { car = Car, recalls = Recalls, image = Image });
 
         }
 
-
     }
+
+    public static class UrlCtrl 
+    {
+        public static bool IsUrl(string path)
+        {
+            HttpWebResponse response = null;
+            var request = (HttpWebRequest)WebRequest.Create(path);
+            request.Method = "HEAD";
+            bool result = true;
+
+            try
+            {
+                response = (HttpWebResponse)request.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                /* A WebException will be thrown if the status of the response is not `200 OK` */
+                result = false;
+            }
+            finally
+            {
+                // Don't forget to close your response.
+                if (response != null)
+                {
+                    response.Close();
+                }
+
+            }
+
+            return result;
+
+
+
+
+            //    Uri uriResult;
+            //    bool result = Uri.TryCreate(str, UriKind.Absolute, out uriResult) &&
+            //    (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+            //bool result = File.Exists(path);
+            //return result;
+        }
+        //public static bool Exists(
+        //    string path
+        //);
+    }
+
 }

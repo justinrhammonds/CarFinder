@@ -323,6 +323,8 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\angular-square.png" />
+    <Content Include="img\Angularjs-IMac.jpg" />
     <Content Include="img\glyphicons-halflings.png" />
     <Content Include="img\imac.png" />
     <Content Include="img\iphone.png" />

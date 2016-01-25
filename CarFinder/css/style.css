@@ -269,6 +269,15 @@ color: #fff;
 	background:#f0f0f0;
 }
 
+.main-section.argyle {
+    background-color: #cccccc; 
+    background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.25), rgba(255,255,255,.25) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(120,120,120,.15), rgba(120,120,120,.15) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(120,120,120,.1) 25%, transparent 25%, transparent 75%, rgba(120,120,120,.1) 75%, rgba(120,120,120,.1)),
+    linear-gradient(120deg, rgba(120,120,120,.1) 25%, transparent 25%, transparent 75%, rgba(120,120,120,.1) 75%, rgba(120,120,120,.1)); 
+    background-size: 70px 120px;
+}
+
 /* Featured Work
 ---------------------------------*/
 .featured-work{
@@ -609,7 +618,7 @@ border: 2px solid #fff;
 ---------------------------------*/
 
 .footer{
-	background:url(../img/pw_maze_black_2X.png) left top repeat;
+	background: #0e0e0e;
 	padding:35px 0;
 }
 .footer-logo{
@@ -784,4 +793,9 @@ border: 2px solid #fff;
 
 .text-info, .text-info:hover {
     color: #000000;
+}
+
+#carfinder {
+    text-align:center;
+    margin: 0 auto;
 }
