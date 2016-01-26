@@ -222,6 +222,11 @@ namespace CarFinder.Controllers
 
             }
 
+            if (string.IsNullOrWhiteSpace(Image))
+            {
+                Image = "../img/car404.jpg";
+            }
+
             return Ok(new { car = Car, recalls = Recalls, image = Image });
 
         }

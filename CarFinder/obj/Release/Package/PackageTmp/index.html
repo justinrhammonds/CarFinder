@@ -10,25 +10,31 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Dancing+Script:400,700|Vidaloka' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
 <link href="css/animate.css" rel="stylesheet" type="text/css">
 <link href="Content/trNgGrid.min.css" rel="stylesheet" />
-<link href="css/responsive.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="js/wow.js"></script>
+  <script type="text/javascript" src="js/classie.js"></script>
 
 </head>
 <body ng-app="carFinderApp">
   <div style="overflow:hidden;">
     <header class="header" id="header">
       <div id="logo" class="container">
-        <span class="branding animated fadeInDown delay-03s"><span>Car</span>Finder</span>
+        <span class="branding animated fadeInDown delay-07s"><span>Car</span>Finder</span>
         <ul class="we-create animated fadeInUp delay-12s">
           <li>Bringing you everything you want to know about cars</li>
         </ul>
-        <ul class="we-create animated fadeInUp delay-30s">
-          <h2 class="we-create animated fadeInUp delay-12s white">...and then some.</h2>
-
-</div>
+          <h2 class="we-create animated fadeInUp delay-30s white">...and then some.</h2>
+  </div>
     </header>
   </div>
 
@@ -41,7 +47,7 @@
             <li><a href="https://github.com/justinrhammonds/CarFinder">View GitHub</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+        <a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
     </div>
 </nav><!--main-nav-end-->
 
@@ -63,7 +69,7 @@
               <i class="fa fa-bolt"></i>
             </div>
             <div class="featured-box-col2  fadeInRight delay-02s">
-              <h3>Built using ASP.NET and SqlSever </h3>
+              <h3>Built using ASP.NET and SqlServer </h3>
               <p>The CarFinder Web API is built using SqlServer (T-SQL) and the ASP.NET (C#) framework. The result is a powerful web service that provides valuable information for a large number of vehicles. This information could be useful in automotive performance and safety testing, car manufacturing and sales, and in general research about vehicle specifications.</p>
             </div>
           </div>
@@ -204,7 +210,6 @@
     <script type="text/ng-template" id="carModal.html">
       <div class="modal-header">
         <div class="modal-title">
-          <button class="pull-right btn btn-default" ng-click="cm.cancel()">X</button>
           <h3>{{cm.car.car.model_year}} {{cm.car.car.make}} {{cm.car.car.model_name}} 
             <span ng-if='cm.car.car.model_trim!= ""'> - {{cm.car.car.model_trim}}</span>
           </h3>
@@ -212,10 +217,10 @@
       </div>
       <div class="modal-body">
         <uib-tabset>
-          <uib-tab heading="Vehicle Information">
-            <img ng-src="{{cm.car.image}}" />
+          <uib-tab class="modal-heading" heading="Vehicle Information">
+            <img ng-src="{{cm.car.image}}"/>
             <uib-accordion>
-              <uib-accordion-group heading="Vehicle Specifications">
+              <uib-accordion-group ngclass="modal-heading" heading="Vehicle Specifications">
                 <div ng-if='cm.car.car.body_style!= ""'><strong>Body: </strong>{{cm.car.car.body_style}}</div>
                 <div ng-if='cm.car.car.engine_position!= ""'><strong>Engine Position: </strong>{{cm.car.car.engine_position}}</div>
                 <div ng-if='cm.car.car.engine_cc!= ""'><strong>Body Style: </strong>{{cm.car.car.engine_cc}}</div>
@@ -247,9 +252,9 @@
               </uib-accordion-group>
             </uib-accordion>
           </uib-tab>
-          <uib-tab heading="Recalled Components">
+          <uib-tab class="modal-heading" heading="Recalled Components">
             <uib-accordion>
-              <div ng-if="cm.car.recalls.Message=='No results found for this request'">I'm sorry, but there were no recall details found for this particular vehicle.</div>
+              <div id="no-result" ng-if="cm.car.recalls.Message=='No results found for this request'">I'm sorry, but there were no recall details found for this particular vehicle.</div>
               <uib-accordion-group heading="{{result.Component}}" ng-repeat="result in cm.car.recalls.Results">
                 <div>Summary: {{result.Summary}}</div>
                 <div>Consequence: {{result.Conequence}}</div>
@@ -294,6 +299,101 @@
       <div class="row"><span class="copyright"><i class="fa fa-copyright"></i> 2016 <a href="http://jhammonds.azurewebsites.net">Justin Hammonds</a> All Rights Reserved.</span></div>
     </div>
 </footer>
+
+  <script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#test').scrollToFixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slideToggle();
+            return false
+
+        });
+
+    });
+  </script>
+
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+    document.getElementById('').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+
+
+  <script type="text/javascript">
+	$(window).load(function(){
+
+		$('.main-nav li a').bind('click',function(event){
+			var $anchor = $(this);
+
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 102
+			}, 1500,'easeInOutExpo');
+			/*
+			if you don't want to use the easing effects:
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000);
+			*/
+			event.preventDefault();
+		});
+	})
+  </script>
+
+  <script type="text/javascript">
+
+$(window).load(function(){
+
+
+  var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 375,
+      columns = null;
+
+
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnWidth: colW
+    }
+  });
+
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    if ( currentColumns !== columns ) {
+      // set new column count
+      columns = currentColumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colW )
+        .isotope('reLayout');
+    }
+
+  }).smartresize(); // trigger resize to set container width
+  $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+
+            filter: selector,
+         });
+         return false;
+    });
+
+});
+
+  </script>
 
 <script src="Scripts/angular.min.js"></script>
 <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>

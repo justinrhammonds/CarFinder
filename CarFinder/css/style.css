@@ -114,6 +114,12 @@ p {
 	margin:0;
 }
 
+.white {
+    color: #fff;
+}
+
+
+
 /* Header Styles
 ---------------------------------*/
 
@@ -121,24 +127,31 @@ p {
     text-align: center;
     background: url('../img/toyota-avalon-image.jpg') no-repeat;
     background-size: 100%;
-    padding: 280px 0;
-}
-.logo{
-	width:130px;
-	margin:0 auto 35px;
+    padding: 200px 0;
 }
 
-.header h1{
-	font-family: 'Montserrat',sans-serif;
-	font-size:50px;
-	font-weight:400;
-	letter-spacing: -1px;
-	margin:0 0 22px 0 ;
-	color:#fff;
+#logo {
+	margin:0 auto;
+    position:relative;
+    bottom: 225px;
+}
+
+.branding {
+    font-family: 'Vidaloka', serif;
+    font-size: 120px;
+    color: #fff;
+}
+
+.branding span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 136px;
+    font-weight: 700;
+    color: #f01516;
 }
 
 .we-create{
-	padding:0;
+    position:relative;
+    top:30px;
 	margin:0 auto;
 }
 
@@ -146,25 +159,15 @@ p {
 	display:inline-block;
 	font-family: 'Montserrat',sans-serif;
 	font-size:24px;
-	color: #bcbcbc;
+	color: #fff;
 	text-transform: uppercase;
 	font-weight: 400;
 	margin:-10px 5px 0 0;
 	padding:0 0 0 15px;
 }
 
-.start-button {
-	padding-left: 0px;
-}
-
-.start-button li a{
-color: #fff;
-}
-
-
 .link{
 	padding:15px 35px;
-	/*background:#7cc576;*/
 	color:#fff !important;
 	font-size:16px;
 	font-weight:400;
@@ -190,24 +193,28 @@ color: #fff;
 	color:#fff !important;
 }
 
+
+
+
+
 /* Navigation
 ---------------------------------*/
 .main-nav-outer{
-	padding:0px;
+	padding:5px;
 	border-bottom:1px solid #dddddd;
 	box-shadow:0 4px 5px -3px #ececec;
 	position:relative;
 	background:#222;
 }
 .main-nav{
+    background: #222;
 	text-align:center;
-	margin:10px 0 0px;
 	padding:0;
 	list-style:none;
 }
 .main-nav li{
+    background: #222;
 	display:inline;
-	margin:0 1px;
     color:#fff;
 }
 .main-nav li a{
@@ -234,6 +241,26 @@ color: #fff;
 
 .main-section{
 	padding:90px 0 110px;
+}
+
+#nav-branding a {
+    font-family: 'Vidaloka', serif;
+    font-size: 30px;
+}
+
+#nav-branding a span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    color: #f01516;
+}
+
+#nav-branding a:hover {
+    color: inherit;
+}
+
+.main-nav li:not(#nav-branding) {
+    text-transform: uppercase;
 }
 
 
@@ -271,6 +298,19 @@ color: #fff;
     linear-gradient(60deg, rgba(120,120,120,.1) 25%, transparent 25%, transparent 75%, rgba(120,120,120,.1) 75%, rgba(120,120,120,.1)),
     linear-gradient(120deg, rgba(120,120,120,.1) 25%, transparent 25%, transparent 75%, rgba(120,120,120,.1) 75%, rgba(120,120,120,.1)); 
     background-size: 70px 120px;
+}
+
+.jh-button {
+    background-color: #333;
+    color: #ddd;
+    margin: 0 auto 25px 70px;
+}
+.jh-button:hover {
+    background-color:#444;
+    color:#fff;
+}
+#angular {
+    max-width: 380px;
 }
 
 /* Featured Work
@@ -599,14 +639,13 @@ border: 2px solid #fff;
 .facebook a:hover {
 	background: #3b5998;
 }
-.pinterest a:hover {
-	background: #cb2026;
-}
-.gplus a:hover {
-	background: #dd4b39;
-}
-.dribbble a:hover {
-	background: #ea4c89;
+
+#email {
+    text-decoration: none;
+    font-family: 'Montserrat',sans-serif;
+	font-size:14px;
+	color: #222;
+	text-transform: uppercase;
 }
 
 /* Footer
@@ -651,6 +690,26 @@ border: 2px solid #fff;
 
 .footer a:hover {
     color: #777;
+}
+
+.res-nav_click {
+	line-height:38px;
+	font-family: 'FontAwesome';
+	font-size:38px;
+	text-decoration: none !important;
+	color:#777777;
+	font-style:normal;
+	display:none;
+	width:42px;
+	height:27px;
+	margin:20px auto;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.res-nav_click:hover, .res-nav_click:active, .res-nav_click:focus {
+	color: #7cc576 !important;
 }
 
 
@@ -706,44 +765,7 @@ border: 2px solid #fff;
 }
 
 
-/****** CUSTOM STYLES ******************/
-
-#logo {
-    margin-top: -285px;
-}
-
-.branding {
-    font-family: 'Vidaloka', serif;
-    font-size: 120px;
-    color: #fff;
-}
-
-.branding span {
-    font-family: 'Dancing Script', cursive;
-    font-size: 136px;
-    font-weight: 700;
-    color: #f01516;
-}
-
-#nav-branding a {
-    font-family: 'Vidaloka', serif;
-    font-size: 30px;
-}
-
-#nav-branding a span {
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    font-weight: 700;
-    color: #f01516;
-}
-
-#nav-branding a:hover {
-    color: inherit;
-}
-
-.main-nav li:not(#nav-branding) {
-    text-transform: uppercase;
-}
+/****** Carfinder Styles ******************/
 
 .select {
     margin-bottom: 20px;
@@ -776,25 +798,6 @@ border: 2px solid #fff;
     margin: 0 auto;
 }
 
-.white {
-    color: #fff;
-}
-
-#angular {
-    max-width: 400px;
-}
-
-.jh-button {
-    background-color: #333;
-    color: #ddd;
-    margin: 0 auto 25px 70px;
-}
-
-.jh-button:hover {
-    background-color:#444;
-    color:#fff;
-}
-
 .pagination > .active > a,
 .pagination > .active > a:focus {
     background-color:#666;
@@ -811,10 +814,16 @@ border: 2px solid #fff;
     color: #444;
 }
 
-#email {
-    text-decoration: none;
-    font-family: 'Montserrat',sans-serif;
-	font-size:14px;
-	color: #222;
-	text-transform: uppercase;
+/****** Modal Styles ******************/
+
+.modal-heading,
+.panel-title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
+
+#no-result {
+    margin-top:20px;
+    padding: 20px;
+}
+
