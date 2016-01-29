@@ -26,7 +26,7 @@
 
 </head>
 <body ng-app="carFinderApp">
-  <div style="overflow:hidden;">
+  <div>
     <header class="header" id="header">
       <div id="logo" class="container">
         <span class="branding animated fadeInDown delay-07s"><span>Car</span>Finder</span>
@@ -35,33 +35,37 @@
         </ul>
           <h2 class="we-create animated fadeInUp delay-30s white">...and then some.</h2>
   </div>
-    </header>
-  </div>
-
-<nav class="main-nav-outer" id="test"><!--main-nav-start-->
-	<div class="container">
-        <ul class="main-nav">
-        	<li><a href="#howitworks">How It Works</a></li>
+      <nav class="main-nav-outer" id="test">
+        <!--main-nav-start-->
+        <div class="container">
+          <ul class="main-nav">
+            <li><a href="#howitworks">How It Works</a></li>
             <li><a href="#tryitout">Try It Out</a></li>
             <li id="nav-branding"><a href="#header"><span>Car</span>Finder</a></li>
             <li><a href="https://github.com/justinrhammonds/CarFinder">View GitHub</a></li>
             <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
-    </div>
-</nav><!--main-nav-end-->
+          </ul>
+          <a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+        </div>
+      </nav><!--main-nav-end-->
+    </header>
+  </div>
 
-  <section class="main-section" id="tryit">
+
+
+  <section class="main-section">
     <!--main-section-->
     <div class="container">
       <div class="row">
-        <div class="col-lg-5 col-sm-4">
-          <a class="jh-button btn btn-lg" href="http://jhammonds-carfinder.azurewebsites.net/help">View the Documentation <i class="fa fa-arrow-right"></i></a>
-          <figure class="fadeInLeft">
-            <img id="angular" src="img/angular-square.png" />
-          </figure>
+        <div style="text-align:center;" class="col-sm-5 featured-work">
+          <div class="featured-box">
+            <a class="jh-button btn btn-lg" href="http://jhammonds-carfinder.azurewebsites.net/help">View the Documentation <i class="fa fa-arrow-right"></i></a>
+            <figure class="fadeInLeft">
+              <img id="angular" src="img/angular-square.png" />
+            </figure>
+          </div>
         </div>
-        <div class="col-lg-7 col-sm-8 featured-work">
+        <div class="col-sm-7 featured-work">
           <h2>Special Features</h2>
           <br />
           <div class="featured-box">
@@ -91,7 +95,6 @@
               <p>The CarFinder Web API application is designed to look great and function well in any screen size, whether on your mobile phone, a tablet or a desktop computer. </p>
             </div>
           </div>
-          <a class="Learn-More" href="#">Learn More</a>
         </div>
       </div>
     </div>
@@ -276,7 +279,7 @@
         <div class="team-leader-box">
           <div class="team-leader  fadeInDown delay-03s">
             <div class="team-leader-shadow"><a href="#"></a></div>
-            <img src="img/team-leader-pic1.jpg" alt="">
+            <img src="img/jh-bowtie.jpg" />
             <ul>
               <li><a href="https://twitter.com/jhamm_84" class="fa-twitter"></a></li>
               <li><a href="https://www.facebook.com/justin.hammonds.77" class="fa-facebook"></a></li>
@@ -320,11 +323,11 @@
       }
     );
     wow.init();
-    document.getElementById('').onclick = function() {
-      var section = document.createElement('section');
-      section.className = 'wow fadeInDown';
-      this.parentNode.insertBefore(section, this);
-    };
+    //document.getElementById('').onclick = function() {
+    //  var section = document.createElement('section');
+    //  section.className = 'wow fadeInDown';
+    //  this.parentNode.insertBefore(section, this);
+    //};
   </script>
 
 
