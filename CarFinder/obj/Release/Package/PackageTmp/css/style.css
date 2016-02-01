@@ -77,6 +77,7 @@ body {
 	font-weight:normal;
 	color:#555555;
 	margin:0;
+    width:100%;
 }
 
 a, a:hover, a:active, a:focus {
@@ -127,7 +128,7 @@ p {
     text-align: center;
     background: url('../img/toyota-avalon-image.jpg') no-repeat;
     background-size: 100%;
-    padding: 200px 0;
+    padding:0;
 }
 
 #logo {
@@ -183,14 +184,11 @@ p {
 }
 .link:hover {
 	text-decoration:none;
-	/*color:#7cc576 !important;*/
-	background:#fff;
+	color: #f01516 !important;
 }
 
 .link:active, .link:focus {
-	/*background: #7cc576;*/
 	text-decoration:none;
-	color:#fff !important;
 }
 
 
@@ -199,18 +197,22 @@ p {
 
 /* Navigation
 ---------------------------------*/
+nav {
+    width: 100% !important;
+}
 .main-nav-outer{
 	padding:5px;
 	border-bottom:1px solid #dddddd;
 	box-shadow:0 4px 5px -3px #ececec;
 	position:relative;
 	background:#222;
+    z-index:999;
 }
 .main-nav{
     background: #222;
 	text-align:center;
-	padding:0;
 	list-style:none;
+    padding:0;
 }
 .main-nav li{
     background: #222;
@@ -221,10 +223,9 @@ p {
 	display:inline-block;
 	color:#fff;
 	font-family: 'Montserrat', sans-serif;
-    /*font-weight: 700;*/
 	text-decoration: none;
 	line-height:20px;
-	margin:17px 32px;
+    padding: 20px;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
@@ -303,13 +304,14 @@ p {
 .jh-button {
     background-color: #333;
     color: #ddd;
-    margin: 0 auto 25px 70px;
+    margin: 0 auto 25px auto;
 }
 .jh-button:hover {
     background-color:#444;
     color:#fff;
 }
 #angular {
+    width:100%;
     max-width: 380px;
 }
 
@@ -369,7 +371,6 @@ p {
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
-	display: none;
 }
 .Learn-More i{ 
 	padding-right:15px;
@@ -709,7 +710,7 @@ border: 2px solid #fff;
 }
 
 .res-nav_click:hover, .res-nav_click:active, .res-nav_click:focus {
-	color: #7cc576 !important;
+    color: #f01516;
 }
 
 

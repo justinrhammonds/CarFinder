@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1">
+<!--<meta name="viewport" content="width=device-width, maximum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>CarFinder | Web API</title>
 <link rel="icon" href="favicon.png" type="image/png">
@@ -185,27 +186,25 @@
 
     <div class="container">
       <div class="row">
-        <table class="col-10" id="car-table" tr-ng-grid="car.cars" items="car.cars" page-items="25">
-          <thead>
-            <tr>
-              <th field-name="model_year" display-name="Year"></th>
-              <th field-name="make" display-name="Make"></th>
-              <th field-name="model_name" display-name="Model"></th>
-              <th field-name="model_trim" display-name="Trim"></th>
-              <th field-name="body_style" display-name="Body Style"></th>
-              <th field-name="engine_power_ps" display-name="Horse Power"></th>
-              <th field-name="zero_to_100_kph" display-name="0-100 KPH"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <button class="btn btn=group-sm" ng-click="car.open(gridItem.id)">view</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <!--<table class="col-10" id="car-table" tr-ng-grid="car.cars" items="car.cars" fields="['model_year','make','model_name','model_trim']" page-items="20">-->
+          <table class="col-10" id="car-table" tr-ng-grid="car.cars" items="car.cars" page-items="20">
+            <thead>
+              <tr>
+                <th field-name="model_year" display-name="Year"></th>
+                <th field-name="make" display-name="Make"></th>
+                <th field-name="model_name" display-name="Model"></th>
+                <th field-name="model_trim" display-name="Trim"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button class="btn btn=group-sm" ng-click="car.open(gridItem.id)">view</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+</div>
     </div>
 
     <!--  --------------------------  -->

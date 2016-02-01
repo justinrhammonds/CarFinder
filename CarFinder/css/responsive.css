@@ -152,5 +152,9 @@
     .branding span {font-size: 56px;}
     .main-section {
         padding: 40px inherit;
+      
+    }
+    #car-table * {
+
     }
 }
