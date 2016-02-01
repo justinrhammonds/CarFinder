@@ -6,19 +6,16 @@
  Author URI: http://bootstraptaste.com
  */
 
-
-/********************** 
+/**********************
+     
     COLORS:
     Red - #f01516;
-
 
     FONTS:
     font-family: 'Vidaloka', serif;
     font-family: 'Dancing Script', cursive;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Muli', sans-serif;
-
-
 
 ***********************/
  
@@ -31,6 +28,12 @@
 
 /* Clear Floated Elements
 ---------------------------------*/
+
+* {
+    outline: none;
+}
+
+
 .clear {
   clear: both;
   display: block;
@@ -58,15 +61,7 @@
 
 img{ max-width:100%;}
 
-a, a:hover, a:active{outline:0px; text-decoration: none;}
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+a, a:hover, a:active, a:focus {outline:0px; text-decoration: none;}
 
 /* Primary Styles
 ---------------------------------*/
@@ -94,6 +89,7 @@ h2{
 	text-align:center;
 	text-transform:uppercase;
 }
+
 h3 {
 	font-family: 'Montserrat', sans-serif;
 	color:#222222;
@@ -102,6 +98,8 @@ h3 {
 	text-transform:uppercase;
 	font-weight:700;
 }
+
+
 h6 {
 	font-size:16px;
 	color:#555555;
@@ -119,7 +117,9 @@ p {
     color: #fff;
 }
 
-
+.red {
+    color: #f01516;
+}
 
 /* Header Styles
 ---------------------------------*/
@@ -127,14 +127,15 @@ p {
 .header {
     text-align: center;
     background: url('../img/toyota-avalon-image.jpg') no-repeat;
-    background-size: 100%;
+    background-size: cover;
     padding:0;
 }
 
 #logo {
 	margin:0 auto;
     position:relative;
-    bottom: 225px;
+    bottom: 0;
+    height: 500px;
 }
 
 .branding {
@@ -152,19 +153,12 @@ p {
 
 .we-create{
     position:relative;
-    top:30px;
+    bottom:10px;
 	margin:0 auto;
 }
 
-.we-create li{
-	display:inline-block;
-	font-family: 'Montserrat',sans-serif;
-	font-size:24px;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 400;
-	margin:-10px 5px 0 0;
-	padding:0 0 0 15px;
+#web-api {
+    font-size:3em;
 }
 
 .link{
@@ -191,17 +185,14 @@ p {
 	text-decoration:none;
 }
 
-
-
-
-
 /* Navigation
 ---------------------------------*/
 nav {
     width: 100% !important;
 }
+
 .main-nav-outer{
-	padding:5px;
+	padding:0 5px;
 	border-bottom:1px solid #dddddd;
 	box-shadow:0 4px 5px -3px #ececec;
 	position:relative;
@@ -263,7 +254,6 @@ nav {
 .main-nav li:not(#nav-branding) {
     text-transform: uppercase;
 }
-
 
 /* Services
 ---------------------------------*/
@@ -359,113 +349,9 @@ nav {
 .featured-box.seo{
 	background:url(../img/seo.png) left top no-repeat;
 }
-.Learn-More{
-	display:inline-block;
-	padding:0 5px 0 0;
-	/*color:#7cc576;*/
-	font-size:16px;
-	text-transform:uppercase;
-	font-family: 'Montserrat', sans-serif;
-	font-weight:400;
-	line-height:24px;
-	transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-webkit-transition:all 0.3s ease-in-out;
-}
-.Learn-More i{ 
-	padding-right:15px;
-}
 
-.Learn-More:hover, .Learn-More:focus{ 
-	text-decoration:none;
-	color: #111;
-}
-
-/* Clients
+/* Team
 ---------------------------------*/
-.client-part{
-	background:url(../img/section-bg1.jpg) center center no-repeat;
-	background-size:cover;
-	padding:55px 0;
-	text-align:center;
-}
-.client-part-haead{
-	color:#fdfdfd;
-	font-size:28px;
-	line-height:41px;
-	margin:30px 0 10px;
-	font-family: 'Muli', sans-serif;
-	font-style: italic;
-}
-.client{
-	padding:0;
-	margin:20px 0 0;
-	list-style:none;
-	text-align:center;
-}
-.client li{
-	display:inline;
-	margin:0 15px;
-}
-.client li a{
-	display:inline-block;
-}
-.client li a img{
-	margin-bottom:15px;
-	border-radius:50%;
-}
-.client li a:hover{
-	text-decoration:none;
-}
-.client li a h3{
-	color:#ffffff;
-}
-.client li a span{
-	color:#f1f1f1;
-}
-.quote-right{
-	font-style:normal;
-	width:68px;
-	height:68px;
-	margin:0 auto;
-	/*border:2px solid #7cc576;*/
-	border-radius:50%;
-	display:block;
-	line-height:68px;
-	text-align:center;
-	font-size:27px;
-	/*color:#7cc576;*/
-	cursor: pointer;
-	transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-webkit-transition:all 0.3s ease-in-out;
-}
-
-.quote-right:hover{
-color: #fff;
-border: 2px solid #fff;
-}
-
-.c-logo-part{
-	/*background:#7cc576;*/
-	padding:25px 0;
-    filter: alpha(opacity=60);
-}
-.c-logo-part ul{
-	padding:0;
-	margin:0;
-	list-style:none;
-	text-align:center;
-}
-.c-logo-part ul li{
-	display:inline;
-	margin:0 25px;
-}
-.c-logo-part ul a{
-	display:inline-block;
-	margin: 0 20px;
-}
-
 
 .main-section.team{
 	padding:85px 0;
@@ -474,9 +360,6 @@ border: 2px solid #fff;
 	margin-bottom:40px;
 }
 
-
-/* Team
----------------------------------*/
 .team-leader-block{
 	max-width:993px;
 	margin:0 auto;
@@ -827,4 +710,15 @@ border: 2px solid #fff;
     margin-top:20px;
     padding: 20px;
 }
+
+.accordion-toggle,
+.uib-tab > div {
+    cursor:pointer;
+}
+
+.uib-tab > div:hover,
+.uib-tab > div {
+    color:#aaaaaa;
+}
+
 

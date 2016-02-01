@@ -10,31 +10,6 @@
 	.c-logo-part ul li{ margin:0 15px;}
 	.form{ margin:0 0 0 20px}
 	.main-nav{ display:block !important; }
-	/*.portfolioContainer{ width:800px; margin:0px auto !important; } */ 
-	
-}
-@media /*only screen and*/ (min-width: 930px) and (max-width: 991px) {
-    /*.main-nav-outer {
-        margin-top: -50px;
-    }*/
-}
-
-@media /*only screen and*/ (min-width: 880px) and (max-width: 929px) {
-    /*.main-nav-outer {
-        margin-top: -100px;
-    }*/
-}
-
-@media /*only screen and*/ (min-width: 820px) and (max-width: 879px) {
-    /*.main-nav-outer {
-        margin-top: -150px;
-    }*/
-}
-
-@media /*only screen and*/ (min-width: 768px) and (max-width: 819px) {
-    /*.main-nav-outer {
-        margin-top: -200px;
-    }*/
 }
    
 @media /*only screen and*/ (min-width: 768px) and (max-width: 991px) {
@@ -56,19 +31,13 @@
 	.form{ margin:0;}
 	.contact-info-box{ margin:0 ;}
 	.social-link{ margin:0;}
-    .we-create {top:300px;}
-    .we-create h2 {display: none;}
     .jh-button {font-size:90%;}
-	
 }
 
-@media /*only screen and*/ (min-width: 790px) and (max-width: 900px) {
-    .we-create {top: 215px;}
-}
-
-
-@media /*only screen and*/ (min-width: 767px) and (max-width: 789px) {
-    .we-create {top: 190px;}
+@media (max-width: 850px){
+    #logo {
+        height:400px;
+    }
 }
 
 @media /*only screen and*/ (max-width: 767px) {
@@ -78,15 +47,12 @@
 	h3{ font-size:14px;}
 	h6{ font-size:16px; margin-bottom:40px;}
 	p{ line-height:18px;}
-    .we-create {display:none;}
+    .we-create {top: 200px;}
     #nav-branding {display:none;}
 	.service-list{ font-size:12px; margin-bottom:20px;}
 	.header h1{ font-size:28px;}
-	/*.header{ padding:60px 0;}*/
-	.main-section {
-        padding: 20px 0;
-    }
-	.main-nav{ display:none; position:absolute; left:0; width:100%; top:74px; margin:0 auto; flote : none; background:#222;}
+	.main-section {padding: 20px 0;}
+	.main-nav{ display:none; position:absolute; left:0; width:100%; top:74px; margin:0 auto; flote:none; background:#222;}
 	.main-nav li{ display:block;}
 	.main-nav li.small-logo{ display:none;}
 	.main-nav li a{ display:block; padding:7px 32px; border-bottom:none;}
@@ -118,43 +84,28 @@
 	.isotope{ width:400px; margin:0px auto;}
 	.Portfolio-box{}
 	.portfolioContainer{ width:350px; margin:0px auto !important; } 
-    #logo {
-        bottom:50px;
-    }
-	.branding {
-    font-size: 80px;
+	.branding {font-size: 80px;}
+    .branding span {
+        font-family: 'Dancing Script', cursive;
+        font-size: 96px;
+        font-weight: 700;
+        color: #f01516;}
+    #angular {max-width:265px;}
 }
 
-.branding span {
-    font-family: 'Dancing Script', cursive;
-    font-size: 96px;
-    font-weight: 700;
-    color: #f01516;
-}
-
-#angular {
-    max-width:265px;
-}
-	
+@media (max-width: 600px) {
+    #logo {height: 300px;}
+    .we-create {top:95px;}
 }
 
 @media /*only screen and*/ (max-width: 479px) {
 	/****Mobile Portrait 320 ****/
 	.contact-info-box{ margin-left:0px;}
-	/*.header{ padding:40px;}*/
 	.social-link{ margin-left:0px;}
 	.form{ margin:0}
-	/*.c-logo-part ul li{ display:block;}
-	.Portfolio-box{  max-width:300px !important; width:96.4% !important; margin:0 !important}
-	.Portfolio-box img { max-width:100%;}
-	.portfolioContainer{ width:280px !important; margin:0 auto !important }*/ 
     .branding {font-size: 48px;}
     .branding span {font-size: 56px;}
-    .main-section {
-        padding: 40px inherit;
-      
-    }
-    #car-table * {
-
-    }
+    .main-section {padding: 40px inherit;}
+    .we-create {top:75px;}
+    #logo {height: 200px;}
 }
