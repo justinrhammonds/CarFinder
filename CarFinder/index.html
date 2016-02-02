@@ -217,10 +217,10 @@
       </div>
       <div class="modal-body">
         <uib-tabset>
-          <uib-tab class="modal-heading" heading="Vehicle Information">
+          <uib-tab class="modal-heading" id="modal-list" heading="Vehicle Information">
             <img ng-src="{{cm.car.image}}"/>
             <uib-accordion>
-              <uib-accordion-group ngclass="modal-heading" heading="Vehicle Specifications">
+              <uib-accordion-group ng-class="modal-heading" heading="Vehicle Specifications">
                 <div ng-if='cm.car.car.body_style!= ""'><strong>Body: </strong>{{cm.car.car.body_style}}</div>
                 <div ng-if='cm.car.car.engine_position!= ""'><strong>Engine Position: </strong>{{cm.car.car.engine_position}}</div>
                 <div ng-if='cm.car.car.engine_cc!= ""'><strong>Body Style: </strong>{{cm.car.car.engine_cc}}</div>
@@ -252,7 +252,7 @@
               </uib-accordion-group>
             </uib-accordion>
           </uib-tab>
-          <uib-tab class="modal-heading" heading="Recalled Components">
+          <uib-tab class="modal-heading" id="modal-list" heading="Recalled Components">
             <uib-accordion>
               <div id="no-result" ng-if="cm.car.recalls.Message=='No results found for this request'">I'm sorry, but there were no recall details found for this particular vehicle.</div>
               <uib-accordion-group heading="{{result.Component}}" ng-repeat="result in cm.car.recalls.Results">
@@ -286,9 +286,9 @@
               <li><a href="https://github.com/justinrhammonds" class="fa-github-alt"></a></li>
             </ul>
           </div>
-          <h3 class=" fadeInDown delay-03s">Justin Hammonds</h3>
-          <span class=" fadeInDown delay-03s">Web Developer</span>
-          <p class=" fadeInDown delay-03s">Justin is a full stack web developer and an all-around nice guy. If you have any questions about how to use CarFinder Web API, feel free to email him at <a id="email" href="mailto:justinrhammonds@gmail.com">justinrhammonds@gmail.com</a></p>
+          <h3 class="fadeInDown delay-03s">Justin Hammonds</h3>
+          <span class="fadeInDown delay-03s">Web Developer</span>
+          <p class="fadeInDown delay-03s">Justin is a full stack web developer and an all-around nice guy. If you have any questions about how to use CarFinder Web API, feel free to email him at <a id="email" href="mailto:justinrhammonds@gmail.com">justinrhammonds@gmail.com</a></p>
         </div>
       </div>
     </div>

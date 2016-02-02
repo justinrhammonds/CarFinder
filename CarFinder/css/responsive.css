@@ -42,27 +42,27 @@
 
 @media /*only screen and*/ (max-width: 767px) {
 	/****Mobile Landscape 480 Container 100% ****/
-	body{ font-size:12px;}
-	h2{ font-size:26px;}
-	h3{ font-size:14px;}
+	/*body{ font-size:16px;}*/
+	h2{ font-size:22px;}
+	h3{ font-size:18px;}
 	h6{ font-size:16px; margin-bottom:40px;}
-	p{ line-height:18px;}
+	p{ line-height:28px;}
     .we-create {top: 200px;}
     #nav-branding {display:none;}
-	.service-list{ font-size:12px; margin-bottom:20px;}
+	.service-list{ font-size:16px; margin-bottom:20px;}
 	.header h1{ font-size:28px;}
 	.main-section {padding: 20px 0;}
 	.main-nav{ display:none; position:absolute; left:0; width:100%; top:74px; margin:0 auto; flote:none; background:#222;}
 	.main-nav li{ display:block;}
 	.main-nav li.small-logo{ display:none;}
-	.main-nav li a{ display:block; padding:7px 32px; border-bottom:none;}
+	.main-nav li a{ display:block; padding:7px 32px; border-bottom:none; font-size: 16px;}
 	.main-nav li a:hover{color:#f01516;}
 	.team-leader-box{ max-width:307px; width:auto; float:none; margin:0 auto;	}
 	.team-leader-box:nth-of-type(3n){ margin:0 auto}
 	.res-nav_click{ display:block;}
-	.featured-work{ font-size:12px; margin-top:30px;}
-	.featured-box{ font-size:12px;}
-	.featured-box p{ line-height:18px; }
+	.featured-work{ font-size:16px; margin-top:30px;}
+	.featured-box{ font-size:16px;}
+	.featured-box p{ line-height:28px; }
 	.c-logo-part ul a{ margin-bottom:5px;}
 	.main-section.team{ padding:60px 0 50px;}
 	.business-talking h2{ font-size:36px;}
@@ -91,11 +91,19 @@
         font-weight: 700;
         color: #f01516;}
     #angular {max-width:265px;}
+    .team-leader {width:200px; height:200px; margin: 20px auto;}
+    #modal-list, .accordion-toggle > span {font-size:12px;}
 }
 
 @media (max-width: 600px) {
     #logo {height: 300px;}
     .we-create {top:95px;}
+    #web-api {font-size: 2.5em;}
+    .app-modal-window, .modal-dialog {
+  width:90%;
+  max-width:550px;
+  margin: 20px auto;
+}
 }
 
 @media /*only screen and*/ (max-width: 479px) {
@@ -106,6 +114,12 @@
     .branding {font-size: 48px;}
     .branding span {font-size: 56px;}
     .main-section {padding: 40px inherit;}
-    .we-create {top:75px;}
+    .we-create {top:65px;}
     #logo {height: 200px;}
+    #web-api {font-size: 2em;}
+    .app-modal-window, .modal-dialog {
+  width: 94%;
+  max-width:445px;
+  margin: 20px auto;
+}
 }

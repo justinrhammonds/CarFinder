@@ -131,11 +131,16 @@ p {
     padding:0;
 }
 
+.fa-bars {
+    position: relative;
+    bottom:6px;
+}
+
 #logo {
 	margin:0 auto;
     position:relative;
     bottom: 0;
-    height: 500px;
+    height: 550px;
 }
 
 .branding {
@@ -192,7 +197,7 @@ nav {
 }
 
 .main-nav-outer{
-	padding:0 5px;
+	padding:5px;
 	border-bottom:1px solid #dddddd;
 	box-shadow:0 4px 5px -3px #ececec;
 	position:relative;
@@ -365,8 +370,8 @@ nav {
 	margin:0 auto;
 }
 .team-leader-box{
-	width:30%;
-	margin: 0 35%;
+	width:40%;
+	margin: 0 30%;
 	height: 500px;
 	overflow: hidden;
 	text-align: center;
@@ -378,7 +383,7 @@ nav {
 }
 .team-leader-box:nth-of-type(3n+0){ margin:0;}
 .team-leader{
-	width:auto;
+	max-width:300px;
 	height:auto;
 	position:relative;
 	border-radius:50%;
@@ -668,9 +673,8 @@ nav {
 }
 
 .app-modal-window, .modal-dialog {
-  width: 500px;
+  width: 600px;
   margin: 20px auto;
-
 }
 
 .text-info, .text-info:hover {
