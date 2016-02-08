@@ -6,7 +6,7 @@
 @model Collection<ApiDescription>
 
 @{
-    ViewBag.Title = "ASP.NET Web API Help Page";
+    ViewBag.Title = "CarFinder Web API Help Page";
 
     // Group APIs by controller
     ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);
@@ -15,6 +15,7 @@
 <link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
 <header class="help-page">
     <div class="content-wrapper">
+        <br />
         <div class="float-left">
             <h1>@ViewBag.Title</h1>
         </div>
@@ -23,13 +24,12 @@
 <div id="body" class="help-page">
     <section class="featured">
         <div class="content-wrapper">
-            <h2>Introduction</h2>
             <p>
-                Provide a general description of your APIs here.
+              The CarFinder Web API provides access to an extensive list of valuable information about a vehicle, from general factory specifications, to any recall information documented by the National Highway Traffic Safety Administration. This API may be useful in automotive testing, manufacturing, repair, sales, and in general for consumers. <strong>The following information on this page details some of the API specific methods that control how the API works.</strong>
             </p>
         </div>
     </section>
-    <section class="content-wrapper main-content clear-fix">
+    <section class="content-wrapper main-content" style="text-align:left;">
         @foreach (var group in apiGroups)
         {
             @Html.DisplayFor(m => group, "ApiGroup")

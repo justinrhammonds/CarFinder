@@ -11,11 +11,15 @@
         null;
 }
 
-<h2 id="@Model.Key.ControllerName">@Model.Key.ControllerName</h2>
-@if (!String.IsNullOrEmpty(controllerDocumentation))
-{
-    <p>@controllerDocumentation</p>
-}
+<div style="display:none;">
+  <h2 id="@Model.Key.ControllerName">@Model.Key.ControllerName</h2>
+  @if (!String.IsNullOrEmpty(controllerDocumentation))
+  {
+      <p>@controllerDocumentation</p>
+  }
+</div>
+<br />
+<br />
 <table class="help-page-table">
     <thead>
         <tr><th>API</th><th>Description</th></tr>

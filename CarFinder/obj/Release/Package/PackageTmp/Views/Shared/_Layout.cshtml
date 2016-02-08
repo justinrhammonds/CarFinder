@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Dancing+Script:400,700|Vidaloka' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+              <div id="nav-branding"><a class="white" href="http://jhammonds-carfinder.azurewebsites.net"><span>Car</span>Finder</a></div>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("CarFinder Web API", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        
+                
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("CarFinder Homepage", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API Documentation", "Index", "Help", new { area = "" }, null)</li>
+                <ul class="nav navbar-nav" style="margin:10px 10px 10px 15px;">
+                    <li class="white">@Html.ActionLink("API Documentation", "Index", "Help", new { area = "" }, null)</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year Justin Hammonds All Rights Reserved.</p>
-        </footer>
     </div>
-
+    <footer class="footer">
+      <div class="container">
+        <a href="#"><div class="row footer-logo"><span>Car</span>Finder</div></a>
+        <div class="row"><span class="copyright"><i class="fa fa-copyright"></i>@DateTime.Now.Year <a href="http://jhammonds.azurewebsites.net">Justin Hammonds</a> All Rights Reserved.</span></div>
+      </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
