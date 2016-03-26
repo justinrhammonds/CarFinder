@@ -121,6 +121,15 @@ p {
     color: #f01516;
 }
 
+#easter-egg {
+    color:#555;
+}
+
+#easter-egg:hover {
+    color:#555;
+    cursor:text;
+}
+
 /* Header Styles
 ---------------------------------*/
 
